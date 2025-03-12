@@ -20,5 +20,4 @@ public class DoWhile {
         System.out.println("Obrigado!");
         entrada.close();
     }
-
 }
