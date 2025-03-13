@@ -14,16 +14,16 @@ public class ProdutoTeste {
         p2.preco = 12.56;
         p2.desconto = 0.29;
 
-        System.out.println(p1.nome);
-        System.out.println(p2.nome);
+        System.out.printf("O produto é: %s ", p1.nome);
+        System.out.printf("\nO produto é: %s", p2.nome);
 
-        double precoFinal1 = p1.preco * (1 - p1.desconto);
-        System.out.println(precoFinal1);
+        double precoFinal1 = p1.precoComDesconto();
+        System.out.printf("\nO preço final do produto é de R$%.2f", precoFinal1);
 
-        double precoFinal2 = p2.preco * (1- p2.desconto);
-        System.out.println(precoFinal2);
+        double precoFinal2 = p2.precoComDesconto(0.1);
+        System.out.printf("\nO preço final do produto com desconto do gerente é de R$%.2f", precoFinal2);
 
-        double mediaCarrinho = (precoFinal1 + precoFinal2) /2;
-        System.out.printf("A média do carinho é de : R$%.2f " , mediaCarrinho);
+        double mediaCarrinho = (precoFinal1 + precoFinal2) / 2;
+        System.out.printf("\nA média do carinho é de : R$%.2f" , mediaCarrinho);
     }
 }
